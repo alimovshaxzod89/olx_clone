@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Navbar />
+    <!-- <Navbar /> -->
     <Search />
     <Categories />
     <MainCard />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+// import Navbar from '@/components/Navbar.vue'
 import Search from '@/components/Search.vue'
 import Categories from '@/components/Catigories.vue'
 import MainCard from '@/components/MainCards.vue'
@@ -19,7 +19,7 @@ import Footer from '@/components/Footer.vue'
 export default {
   name: 'HomeView',
   components:{
-    Navbar,
+    // Navbar,
     Search,
     MainCard,
     Categories,
