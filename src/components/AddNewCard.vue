@@ -42,7 +42,7 @@
                 <p>Местоположение*</p>
                 <input class="inputName w-50" placeholder="Ташкент, Алмазарский район" type="text" v-model="newCard.region">
                 <p class="mt-5">Цена продукта*</p>
-                <input class="inputName w-50" placeholder="Ташкент, Алмазарский район" type="text" v-model="newCard.price">
+                <input class="inputName w-50" type="text" v-model="newCard.price">
                 <p class="mt-5">Номер телефона</p>
                 <input class="inputName w-50" type="text">
             </div>

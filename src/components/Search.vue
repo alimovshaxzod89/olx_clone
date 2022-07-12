@@ -1,5 +1,9 @@
 <template>
     <div class="search">
+        <div v-if="$store.state.isNotification == true" class="w-50  alert alert-success alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Yangi e'lon muvaffaqiyatli qo'shildi</strong> 
+        </div>
         <div class="search_content d-flex justify-content-center">
             <!-- 1 -->
             <div class="itemOne d-flex justify-content-start align-items-center">
@@ -42,6 +46,7 @@ export default {
     background-color: rgb(242, 244, 245);
     width: 100%;
     padding: 50px 0;
+    /* position: relative; */
 }
 .itemOne{
     background-color: white;
@@ -81,5 +86,13 @@ export default {
     background-color: #103138;
     color: white;
 } 
-
+.alert{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
 </style>

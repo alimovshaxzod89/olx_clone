@@ -113,6 +113,8 @@ export default createStore({
       },
     ],
     shopcard: [],
+    isNotification: false,
+    isNotificationTwo: false
   },
   getters: {
   },
@@ -152,6 +154,7 @@ export default createStore({
       
       value.time = `${currientDay}.${currientMonth}.${currientYear} - ${currientOclock}:${currientMinut}`
       state.cards.push(value)
+      state.isNotification = true
     }
     
   },
