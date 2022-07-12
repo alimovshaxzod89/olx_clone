@@ -40,13 +40,16 @@
                 </div>
             </div>
         </div>
+        <Footer v-if="$store.state.shopcard.length > 1" />
     </div>
 </template>
 <script>
 import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 export default {
     components:{
-        Navbar
+        Navbar,
+        Footer
     }
 }
 </script>

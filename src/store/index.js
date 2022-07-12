@@ -112,7 +112,7 @@ export default createStore({
         isChecked: false
       },
     ],
-    shopcard: []
+    shopcard: [],
   },
   getters: {
   },
@@ -132,9 +132,27 @@ export default createStore({
           card.isChecked = false
           let i = state.shopcard.map(shopcardOne => shopcardOne.id).indexOf(value.id) // find index of your object
           state.shopcard.splice(i, 1)
+          console.log(i);
         }
       })
     },
+    ADD_NEW_CARD(state, value){
+      let currientTime = new Date()
+      let currientDay = currientTime.getDate()
+      let month = currientTime.getMonth()
+      let currientMonth = month < 10 ? `0${month}` : `${month}`
+      let currientYear = currientTime.getFullYear()
+      let currientOclock = currientTime.getHours()
+      let minut = currientTime.getMinutes()
+      let currientMinut = minut < 10 ? `0${minut}` : `${minut}`
+
+      
+      const newId = state.cards.length + 1
+      value.id = newId
+      
+      value.time = `${currientDay}.${currientMonth}.${currientYear} - ${currientOclock}:${currientMinut}`
+      state.cards.push(value)
+    }
     
   },
   actions: {

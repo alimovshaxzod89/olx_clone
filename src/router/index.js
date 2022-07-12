@@ -10,7 +10,12 @@ const routes = [
   {
     path: '/shopcard',
     name: 'shopcard',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CardShopView.vue')
+    component: () => import('../views/CardShopView.vue')
+  },
+  {
+    path: '/fornewcard',
+    name: 'fornewcard',
+    component: () => import('../views/ForNewCard.vue')
   },
 ]
 

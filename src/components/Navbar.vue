@@ -50,7 +50,9 @@
                 ></box-icon>
             </div>
             <div class="sent_announcement">
-                <button>Подать объявление</button>
+                <router-link :to="'/fornewcard'">
+                    <button>Подать объявление</button>
+                </router-link>
             </div>
         </div>
     </div>
