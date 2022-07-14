@@ -23,4 +23,19 @@ p{
     font-size: 14px;
     color: #002f34;
 }
+@media only screen and (max-width: 1000px) {
+    img{
+        width: 150px;
+        height: 150px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 565px) {
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
 </style>

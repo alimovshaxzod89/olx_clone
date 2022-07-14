@@ -2,23 +2,23 @@
     <div class="mainCards row">
         <h1 class="title text-center">Премиум объявления</h1>
         <div 
-            class="card col-3"
+            class="card col-md-3 col-sm-6 col-esm-12"
             v-for="card in $store.state.cards"
             :key="card.id"
         >
             <div class="itemImg">
                 <img :src="card.img" alt="">
             </div>
-            <p class="title"> {{card.productName}} </p><br>
+            <p class="title"> {{card.productName}} </p>
             <p class="region"> {{card.region}} </p> <span class="date region d-block"> {{card.time}} </span>
 
-            <div class="d-flex justify-content-between align-items-end mb-3">
+            <div class="d-flex justify-content-between mt-auto">
                 <h4 class="price"> {{card.price}} </h4> 
-                <div v-if="card.isChecked === false">
-                    <i @click="$store.commit('ADD_TO_BASKET', card)" class='bx bx-heart' style="margin-right: 10px"></i>
+                <div v-if="card.isChecked === false" class="mt-auto">
+                    <i @click="$store.commit('ADD_TO_BASKET', card)" class='bx bx-heart ' style="margin-right: 10px"></i>
                 </div>
-                <div v-if="card.isChecked === true">
-                    <i @click="$store.commit('REMOVE_IN_BASKET', card)" class='bx bxs-heart'  style="margin-right: 10px"></i>
+                <div v-if="card.isChecked === true" class="mt-auto">
+                    <i @click="$store.commit('REMOVE_IN_BASKET', card)" class='bx bxs-heart mt-auto'  style="margin-right: 10px"></i>
                 </div>
             </div>
         </div>
@@ -42,14 +42,12 @@ h1{
 .mainCards{
     padding: 0 180px;
     background-color: rgb(242, 244, 245);
-
-    /* margin-top: 300px; */
 }
 
 .itemImg{
-    width: 250px;
-    height: 250px;
-    margin: auto;
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
 }
 .itemImg img{
     margin-top: 10px;
@@ -68,5 +66,87 @@ h1{
     color: #002f34;
     font-size: 16px;
     padding: 20px 0 0 0;
+}
+@media only screen and (max-width: 1050px) {
+    h1{
+        font-size: 25px;
+    }
+    .itemImg{
+        height: 120px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .region{
+        font-size: 10px;
+    }
+    .price{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .itemImg{
+        height: 80px;
+    }
+    .title{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 766px) {
+    .itemImg{
+        height: 150px;
+    }
+    .mainCards{
+        padding: 0 150px;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .itemImg{
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .itemImg{
+        height: 80px;
+    }
+    .title{
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .mainCards{
+        padding: 0 120px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .itemImg{
+        height: 180px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .region{
+        font-size: 10px;
+    }
+    .price{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 504px) {
+    .mainCards{
+        padding: 0 100px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .itemImg{
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .itemImg{
+        height: 140px;
+    }
+    .mainCards{
+        padding: 0 80px;
+    }
 }
 </style>

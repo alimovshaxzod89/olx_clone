@@ -33,4 +33,14 @@ export default {
 p{
     cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 440px) {
+    p{
+        font-size: 10px;
+    }
+}
 </style>
