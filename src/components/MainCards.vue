@@ -47,13 +47,17 @@ h1{
 .itemImg{
     width: 90%;
     height: 150px;
-    margin: 0 auto;
+    margin: auto;
+    background-size: cover;
+    position: relative;
 }
 .itemImg img{
-    margin-top: 10px;
-    width: 100%;
+    width: 90%;
     height: 90%;
-    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .title, .region, .price{
     margin-left: 10px;
