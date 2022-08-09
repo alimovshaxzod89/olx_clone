@@ -1,8 +1,9 @@
 <template>
-    <div class="mainCards row">
+<div class="mainCards">
+    <div class="col-xxl-8 col-xl-10 col-md-10  col-sm-8 col-7 mx-auto row">
         <h1 class="title text-center">Премиум объявления</h1>
         <div 
-            class="card col-md-3 col-sm-6 col-esm-12"
+            class="card col-md-3 col-sm-6 col-12"
             v-for="card in $store.state.cards"
             :key="card.id"
         >
@@ -23,6 +24,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 <script>
 export default {
@@ -34,16 +36,14 @@ export default {
     margin: 0;
     box-sizing: border-box;
 }
+.mainCards{
+    background-color: rgb(242, 244, 245);
+}
 h1{
     color: #002F34;
     font-size: 32px;
     margin: 10% 0;
 }
-.mainCards{
-    padding: 0 180px;
-    background-color: rgb(242, 244, 245);
-}
-
 .itemImg{
     width: 90%;
     height: 150px;
@@ -71,13 +71,11 @@ h1{
     font-size: 16px;
     padding: 20px 0 0 0;
 }
+   
 @media only screen and (max-width: 1050px) {
     h1{
         font-size: 25px;
     }
-    .itemImg{
-        height: 120px;
-    }
     .title{
         font-size: 14px;
     }
@@ -88,43 +86,15 @@ h1{
         font-size: 12px;
     }
 }
-@media only screen and (max-width: 880px) {
-    .itemImg{
-        height: 80px;
-    }
-    .title{
-        font-size: 12px;
-    }
-}
-@media only screen and (max-width: 766px) {
-    .itemImg{
-        height: 150px;
-    }
-    .mainCards{
-        padding: 0 150px;
-    }
-}
-@media only screen and (max-width: 690px) {
-    .itemImg{
-        height: 100px;
-    }
-}
+
+
 @media only screen and (max-width: 600px) {
-    .itemImg{
-        height: 80px;
-    }
     .title{
         font-size: 10px;
         font-weight: 700;
     }
-    .mainCards{
-        padding: 0 120px;
-    }
 }
 @media only screen and (max-width: 575px) {
-    .itemImg{
-        height: 180px;
-    }
     .title{
         font-size: 14px;
     }
@@ -135,22 +105,6 @@ h1{
         font-size: 12px;
     }
 }
-@media only screen and (max-width: 504px) {
-    .mainCards{
-        padding: 0 100px;
-    }
-}
-@media only screen and (max-width: 400px) {
-    .itemImg{
-        height: 150px;
-    }
-}
-@media only screen and (max-width: 370px) {
-    .itemImg{
-        height: 140px;
-    }
-    .mainCards{
-        padding: 0 80px;
-    }
-}
+
+
 </style>

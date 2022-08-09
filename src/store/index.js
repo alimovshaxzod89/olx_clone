@@ -5,8 +5,8 @@ export default createStore({
     cards: [
       {
         id: 1,
-        img: require('@/assets/img/itemImg.jpeg'),
-        productName: 'Iphone 12 pro',
+        img: 'https://st3.depositphotos.com/2234329/18261/i/1600/depositphotos_182617194-stock-photo-perspective-view-new-apple-iphone.jpg',
+        productName: 'Iphone XS Max',
         region: 'Ташкент, Учтепинский район',
         time: 'вчера 12:40',
         price: '9 600 000 сум',
@@ -14,8 +14,9 @@ export default createStore({
       },
       {
         id: 2,
-        img: require('@/assets/img/itemImg2.jpeg'),
-        productName: 'Lenovo Legion Y530',
+        // img: require('@/assets/img/itemImg2.jpeg'),
+        img: 'https://img.moyo.ua/img/gallery/4644/23/911227_middle.jpg?1587722459',
+        productName: 'Ноутбук ASUS X509JB-EJ063',
         region: 'Ташкент, Чиланзарский район',
         time: 'вчера 21:24',
         price: '12 567 000 сум',
@@ -32,11 +33,11 @@ export default createStore({
       },
       {
         id: 4,
-        img: require('@/assets/img/itemImg4.jpeg'),
-        productName: 'Daewoo Nexia',
+        img: 'https://i.ebayimg.com/images/g/-zYAAOSwR9Fido3w/s-l225.jpg',
+        productName: 'Soch uchun dazmol',
         region: 'Ташкент, Учтепинский район',
         time: 'вчера 15:10',
-        price: '3 800 y.e.',
+        price: '380 000 сум',
         isChecked: false
       },
       {
@@ -50,8 +51,8 @@ export default createStore({
       },
       {
         id: 6,
-        img: require('@/assets/img/itemImg6.jpeg'),
-        productName: 'Intex Бассейны 450×220×84 см',
+        img: 'https://i.ebayimg.com/thumbs/images/g/3sAAAOSwTEdhsJI4/s-l225.jpg',
+        productName: 'Nokia Silver',
         region: 'Ташкент район',
         time: '3 июль',
         price: '200 y.e.',
@@ -104,11 +105,11 @@ export default createStore({
       },
       {
         id: 12,
-        img: require('@/assets/img/itemImg12.jpeg'),
-        productName: 'Daewoo Nexia 2',
+        img: 'https://i.ebayimg.com/images/g/pGAAAOSwsMhiiu28/s-l225.jpg',
+        productName: 'Honda NSX NC1 2016',
         region: 'Ташкент, Учтепинский район',
         time: 'вчера 15:10',
-        price: '5 800 y.e.',
+        price: '25 800 y.e.',
         isChecked: false
       },
     ],
